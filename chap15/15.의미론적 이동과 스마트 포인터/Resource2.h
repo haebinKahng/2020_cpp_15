@@ -9,7 +9,7 @@ class Resource
 public:
 	int *m_data = nullptr;  //규모 큰 데이터 처리하기 위해 동적 array로 
 	unsigned m_length = 0;  //데이터 갯수 담을 수 있다
-
+	
 public:
 	Resource()
 	{
@@ -46,7 +46,7 @@ public:
 		cout << "Resource copy assignment" << endl;
 
 		if (&res == this) return *this;
-		if (this->m_data != nullptr) delete[] m_data;
+		if (this->m_data != nullptr) delete [] m_data;
 
 		m_length = res.m_length;
 		m_data = new int[m_length];
